@@ -12,10 +12,10 @@ import (
 	"github.com/d2lang/util-go/diff"
 	"github.com/d2lang/util-go/mapfs"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2target"
 )
 
 func TestOpacityValidation(t *testing.T) {

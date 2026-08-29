@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2elklayout"
+	"github.com/pancsta/d2/d2layouts/d2elklayout"
 )
 
 func TestELKPluginHydrateOpts(t *testing.T) {

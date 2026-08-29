@@ -7,17 +7,17 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts"
-	"github.com/d2lang/d2/d2layouts/d2sequence"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/internal/testlog"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts"
+	"github.com/pancsta/d2/d2layouts/d2sequence"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/internal/testlog"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 func TestBasicSequenceDiagram(t *testing.T) {

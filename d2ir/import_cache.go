@@ -3,7 +3,7 @@ package d2ir
 import (
 	"math/big"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 // The parser AST is mutable: substitution resolution coalesces strings in

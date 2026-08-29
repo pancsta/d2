@@ -13,9 +13,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/d2lang/d2/lib/font"
-	fontlib "github.com/d2lang/d2/lib/font"
-	"github.com/d2lang/d2/lib/syncmap"
+	"github.com/pancsta/d2/lib/font"
+	fontlib "github.com/pancsta/d2/lib/font"
+	"github.com/pancsta/d2/lib/syncmap"
 )
 
 type FontFamily string

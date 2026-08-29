@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func DrawClass(ctx *Context, x, y, w, h float64, shape d2target.Shape) {

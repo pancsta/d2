@@ -3,7 +3,7 @@ package d2ir
 import (
 	"strings"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 func (m *Map) multiGlob(pattern []string) ([]*Field, bool) {

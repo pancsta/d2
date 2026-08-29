@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/lib/color"
 )
 
 // ThemableElement is a helper class for creating new XML elements.

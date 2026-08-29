@@ -15,9 +15,9 @@ import (
 	pngstruct "github.com/dsoprea/go-png-image-structure/v2"
 	"github.com/mxschmitt/playwright-go"
 
-	"github.com/d2lang/d2/lib/compression"
-	"github.com/d2lang/d2/lib/env"
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/lib/compression"
+	"github.com/pancsta/d2/lib/env"
+	"github.com/pancsta/d2/lib/version"
 )
 
 // ConvertSVG scales the image by 2x

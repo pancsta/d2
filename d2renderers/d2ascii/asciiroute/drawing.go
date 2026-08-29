@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"math"
 
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func drawSegmentBetweenPoints(ctx context.Context, rd RouteDrawer, start, end *geo.Point, segmentIndex int, conn d2target.Connection,

@@ -1,6 +1,6 @@
-module github.com/d2lang/d2
+module github.com/pancsta/d2
 
-go 1.27.0
+go 1.26.5
 
 require (
 	codeberg.org/go-pdf/fpdf v0.12.0

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	d2log "github.com/d2lang/d2/lib/log"
+	d2log "github.com/pancsta/d2/lib/log"
 )
 
 func TestWithTBCompatibility(t *testing.T) {

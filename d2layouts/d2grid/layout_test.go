@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2grid"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2grid"
 )
 
 func TestGenLayout(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/d2lang/d2/d2graph"
+	"github.com/pancsta/d2/d2graph"
 	"github.com/d2lang/util-go/xmain"
 	"github.com/d2lang/util-go/xos"
 )

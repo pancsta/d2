@@ -5,8 +5,8 @@ import (
 
 	"github.com/d2lang/util-go/assert"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2format"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2format"
 )
 
 func TestEscapeSingleQuoted(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/d2lang/util-go/assert"
 
-	"github.com/d2lang/d2/d2ir"
+	"github.com/pancsta/d2/d2ir"
 )
 
 func testCompileImports(t *testing.T) {

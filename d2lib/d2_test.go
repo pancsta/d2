@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 func TestGetLayoutDoesNotUseEnvironmentFallback(t *testing.T) {

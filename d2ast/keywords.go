@@ -1,6 +1,6 @@
 package d2ast
 
-import "github.com/d2lang/d2/lib/label"
+import "github.com/pancsta/d2/lib/label"
 
 // All reserved keywords. See init below.
 var ReservedKeywords map[string]struct{}

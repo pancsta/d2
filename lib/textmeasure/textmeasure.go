@@ -10,8 +10,8 @@ import (
 
 	"github.com/rivo/uniseg"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 const TAB_SIZE = 4

@@ -11,13 +11,13 @@ import (
 
 	"github.com/d2lang/util-go/go2"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/lib/color"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
-	"github.com/d2lang/d2/lib/shape"
-	"github.com/d2lang/d2/lib/svg"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/lib/color"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
+	"github.com/pancsta/d2/lib/shape"
+	"github.com/pancsta/d2/lib/svg"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 const (

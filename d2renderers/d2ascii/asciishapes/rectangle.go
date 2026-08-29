@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func DrawRect(ctx *Context, x, y, w, h float64, label, labelPosition, symbol string, preserveHeight ...bool) {

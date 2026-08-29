@@ -3,7 +3,7 @@ package shape
 import (
 	"math"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 	"github.com/d2lang/util-go/go2"
 )
 

@@ -5,7 +5,7 @@ package main
 import (
 	"syscall/js"
 
-	"github.com/d2lang/d2/d2js/d2wasm"
+	"github.com/pancsta/d2/d2js/d2wasm"
 )
 
 func main() {

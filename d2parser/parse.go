@@ -14,7 +14,7 @@ import (
 	tunicode "golang.org/x/text/encoding/unicode"
 	"golang.org/x/text/transform"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 	"github.com/d2lang/util-go/go2"
 )
 

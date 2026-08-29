@@ -1,7 +1,7 @@
 package d2graph
 
 import (
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2target"
 )
 
 func (obj *Object) IsSequenceDiagram() bool {

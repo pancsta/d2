@@ -3,8 +3,8 @@
 package d2themes
 
 import (
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/color"
 )
 
 type Theme struct {

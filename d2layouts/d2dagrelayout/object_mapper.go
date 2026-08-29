@@ -3,7 +3,7 @@ package d2dagrelayout
 import (
 	"strconv"
 
-	"github.com/d2lang/d2/d2graph"
+	"github.com/pancsta/d2/d2graph"
 )
 
 type objectMapper struct {

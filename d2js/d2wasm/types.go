@@ -3,9 +3,9 @@
 package d2wasm
 
 import (
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2target"
 )
 
 type WASMResponse struct {

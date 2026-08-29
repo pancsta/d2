@@ -3,10 +3,10 @@ package d2oracle
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2parser"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2parser"
 )
 
 func GetBoardGraph(g *d2graph.Graph, boardPath []string) *d2graph.Graph {

@@ -25,7 +25,7 @@ import (
 	"time"
 )
 
-const mainModule = "github.com/d2lang/d2"
+const mainModule = "github.com/pancsta/d2"
 
 func main() {
 	if err := run(os.Args[1:]); err != nil {
@@ -426,16 +426,16 @@ func newSPDXDocument(build *debug.BuildInfo, name, version string, stamp time.Ti
 		DataLicense:       "CC0-1.0",
 		SPDXID:            "SPDXRef-DOCUMENT",
 		Name:              name,
-		DocumentNamespace: fmt.Sprintf("https://github.com/d2lang/d2/sbom/%s/%s", revision, url.PathEscape(version)),
+		DocumentNamespace: fmt.Sprintf("https://github.com/pancsta/d2/sbom/%s/%s", revision, url.PathEscape(version)),
 		CreationInfo: spdxCreationInfo{
 			Created:  stamp.UTC().Format(time.RFC3339),
-			Creators: []string{"Tool: github.com/d2lang/d2/ci/release/releasetool"},
+			Creators: []string{"Tool: github.com/pancsta/d2/ci/release/releasetool"},
 		},
 		Packages: []spdxPackage{{
 			Name:             mainModule,
 			SPDXID:           mainID,
 			VersionInfo:      version,
-			DownloadLocation: "git+https://github.com/d2lang/d2.git@" + revision,
+			DownloadLocation: "git+https://github.com/pancsta/d2.git@" + revision,
 			FilesAnalyzed:    false,
 			LicenseConcluded: noAssertion,
 			LicenseDeclared:  "MPL-2.0",

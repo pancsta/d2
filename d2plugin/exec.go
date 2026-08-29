@@ -14,8 +14,8 @@ import (
 	"github.com/d2lang/util-go/xdefer"
 	"github.com/d2lang/util-go/xmain"
 
-	"github.com/d2lang/d2/d2graph"
-	timelib "github.com/d2lang/d2/lib/time"
+	"github.com/pancsta/d2/d2graph"
+	timelib "github.com/pancsta/d2/lib/time"
 )
 
 // execPlugin uses the binary at pathname with the plugin protocol to implement

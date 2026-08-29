@@ -6,10 +6,10 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2sketch"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/d2renderers/d2sketch"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/version"
 )
 
 var transitionDurationMS = 1

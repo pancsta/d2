@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/d2lang/d2/internal/testlog"
+	"github.com/pancsta/d2/internal/testlog"
 )
 
 var _default = slog.New(NewPrettyHandler(NewLevelHandler(slog.LevelInfo, slog.NewTextHandler(os.Stderr, nil)))).With(slog.String("logger", "default"))

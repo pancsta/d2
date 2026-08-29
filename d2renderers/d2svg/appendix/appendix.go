@@ -11,14 +11,14 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/d2themes"
-	"github.com/d2lang/d2/lib/color"
-	svglib "github.com/d2lang/d2/lib/svg"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/d2themes"
+	"github.com/pancsta/d2/lib/color"
+	svglib "github.com/pancsta/d2/lib/svg"
+	"github.com/pancsta/d2/lib/textmeasure"
 	"github.com/d2lang/util-go/go2"
 )
 

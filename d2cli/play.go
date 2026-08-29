@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/d2lang/d2/lib/urlenc"
+	"github.com/pancsta/d2/lib/urlenc"
 	"github.com/d2lang/util-go/xbrowser"
 	"github.com/d2lang/util-go/xmain"
 )

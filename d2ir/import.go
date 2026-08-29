@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2parser"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2parser"
 )
 
 func (c *compiler) pushImportStack(imp *d2ast.Import) (string, bool) {

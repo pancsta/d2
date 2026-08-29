@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2lib"
+	"github.com/pancsta/d2/d2lib"
 	"github.com/d2lang/util-go/xdefer"
 	"github.com/d2lang/util-go/xmain"
 )

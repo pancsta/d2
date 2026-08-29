@@ -14,14 +14,14 @@ import (
 	"github.com/d2lang/util-go/assert"
 	"github.com/d2lang/util-go/diff"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2dagrelayout"
-	"github.com/d2lang/d2/d2lib"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2renderers/d2svg/appendix"
-	"github.com/d2lang/d2/internal/testlog"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2dagrelayout"
+	"github.com/pancsta/d2/d2lib"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2renderers/d2svg/appendix"
+	"github.com/pancsta/d2/internal/testlog"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 func TestAppendix(t *testing.T) {
