@@ -42,6 +42,9 @@
     configure the limit. [#2923](https://github.com/d2lang/d2/pull/2923)
   - Honor cancellation while expanding substitutions and materializing compiled
     graphs. [#2923](https://github.com/d2lang/d2/pull/2923)
+  - Limit wildcard edge connections and selectors to bounded expansion work,
+    returning a clear error before excessive fanout consumes resources.
+    [#2926](https://github.com/d2lang/d2/pull/2926)
 - decoding and assets:
   - Cap decompressed URL-encoded D2 input at 16 MiB. [#2902](https://github.com/d2lang/d2/pull/2902)
   - Bound image references, locators, fetched and decoded bytes, cached data, and
@@ -53,6 +56,9 @@
     rendering. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit raw graphs to 1,024 levels and 4,096 boards. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit LaTeX labels to 4 KiB and 128 nested groups. [#2922](https://github.com/d2lang/d2/pull/2922)
+  - Limit Dagre and ELK inputs to 1,024 objects and 1,024 edges, and reject
+    overly interconnected graphs before entering non-cancellable layout.
+    [#2926](https://github.com/d2lang/d2/pull/2926)
 - links and paints:
   - Reject dangerous ordinary link schemes after decoding common obfuscation. [#2896](https://github.com/d2lang/d2/pull/2896)
   - Require gradient stop positions to be finite numbers or percentages. [#2905](https://github.com/d2lang/d2/pull/2905)
