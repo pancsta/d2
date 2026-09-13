@@ -53,6 +53,9 @@
     rendering. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit raw graphs to 1,024 levels and 4,096 boards. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit LaTeX labels to 4 KiB and 128 nested groups. [#2922](https://github.com/d2lang/d2/pull/2922)
+  - Limit grids to 10,000 rows or columns and 1,000,000 total cells, returning
+    a clear error for oversized dimensions instead of crashing or exhausting
+    memory. [#2924](https://github.com/d2lang/d2/pull/2924)
 - links and paints:
   - Reject dangerous ordinary link schemes after decoding common obfuscation. [#2896](https://github.com/d2lang/d2/pull/2896)
   - Require gradient stop positions to be finite numbers or percentages. [#2905](https://github.com/d2lang/d2/pull/2905)
