@@ -66,6 +66,12 @@ func (c *compiler) stopped() bool {
 	if c.globExpansion == nil {
 		c.globExpansion = &globExpansionBudget{limit: DefaultMaxGlobExpansion}
 	}
+	if c.edgeExpansion == nil {
+		c.edgeExpansion = &edgeExpansionBudget{limit: DefaultMaxEdgeExpansion}
+	}
+	if c.edgeExpansionWork == nil {
+		c.edgeExpansionWork = &edgeExpansionWorkBudget{limit: DefaultMaxEdgeExpansionWork}
+	}
 	if err := c.ctx.Err(); err != nil {
 		c.contextErr = err
 		c.halted = true

@@ -45,6 +45,9 @@
   - Limit recursive glob matching and generated-field work so small diagrams
     fail with a clear error instead of consuming excessive CPU or memory.
     [#2925](https://github.com/d2lang/d2/pull/2925)
+  - Limit wildcard edge connections and selectors to bounded expansion work,
+    returning a clear error before excessive fanout consumes resources.
+    [#2926](https://github.com/d2lang/d2/pull/2926)
 - decoding and assets:
   - Cap decompressed URL-encoded D2 input at 16 MiB. [#2902](https://github.com/d2lang/d2/pull/2902)
   - Bound image references, locators, fetched and decoded bytes, cached data, and
@@ -59,6 +62,9 @@
   - Limit grids to 10,000 rows or columns and 1,000,000 total cells, returning
     a clear error for oversized dimensions instead of crashing or exhausting
     memory. [#2924](https://github.com/d2lang/d2/pull/2924)
+  - Limit Dagre and ELK inputs to 1,024 objects and 1,024 edges, and reject
+    overly interconnected graphs before entering non-cancellable layout.
+    [#2926](https://github.com/d2lang/d2/pull/2926)
 - links and paints:
   - Reject dangerous ordinary link schemes after decoding common obfuscation. [#2896](https://github.com/d2lang/d2/pull/2896)
   - Require gradient stop positions to be finite numbers or percentages. [#2905](https://github.com/d2lang/d2/pull/2905)

@@ -30,6 +30,13 @@ type CompileOptions struct {
 	// materialization. Zero uses the secure compiler default. Explicit source
 	// fields are not counted as materialization work.
 	MaxGlobExpansion int64
+	// MaxEdgeExpansion bounds distinct edge-segment and endpoint combinations
+	// considered by edge globs. Zero uses the secure compiler default. Explicit
+	// edges do not consume this budget.
+	MaxEdgeExpansion int64
+	// MaxEdgeExpansionWork bounds all endpoint-pair examinations performed by
+	// edge globs, including lazy replays. Zero uses the secure compiler default.
+	MaxEdgeExpansionWork int64
 	// FS is the file system used for resolving imports in the D2 text. Nil
 	// disables imports. Callers that accept untrusted input should prefer a
 	// filesystem constrained to the intended import root; lib/localfile provides
@@ -90,6 +97,8 @@ func compileInput(ctx context.Context, input string, compileOpts *CompileOptions
 		UTF16Pos:             compileOpts.UTF16Pos,
 		MaxVariableExpansion: compileOpts.MaxVariableExpansion,
 		MaxGlobExpansion:     compileOpts.MaxGlobExpansion,
+		MaxEdgeExpansion:     compileOpts.MaxEdgeExpansion,
+		MaxEdgeExpansionWork: compileOpts.MaxEdgeExpansionWork,
 		FS:                   compileOpts.FS,
 	})
 	if err != nil {

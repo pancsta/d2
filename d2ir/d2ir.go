@@ -1563,7 +1563,7 @@ func (m *Map) getEdgesMode(eid *EdgeID, refctx *RefContext, c *compiler, indexed
 		gctx = c.ensureGlobContext(refctx)
 	}
 	var ea []*Edge
-	m.getEdges(eid, refctx, gctx, indexed, &ea)
+	m.getEdges(eid, refctx, gctx, c, indexed, &ea)
 	return ea
 }
 
@@ -1590,7 +1590,10 @@ func (m *Map) getEdgesIndexed(eid *EdgeID) []*Edge {
 	return edges
 }
 
-func (m *Map) getEdges(eid *EdgeID, refctx *RefContext, gctx *globContext, indexed bool, ea *[]*Edge) error {
+func (m *Map) getEdges(eid *EdgeID, refctx *RefContext, gctx *globContext, c *compiler, indexed bool, ea *[]*Edge) error {
+	if c != nil && c.stopped() {
+		return nil
+	}
 	eid, m, common, err := eid.resolve(m)
 	if err != nil {
 		return err
@@ -1608,11 +1611,14 @@ func (m *Map) getEdges(eid *EdgeID, refctx *RefContext, gctx *globContext, index
 				}
 			}
 		}
-		fa, err := m.ensureFieldMode(commonKP, nil, false, nil, indexed)
+		fa, err := m.ensureFieldMode(commonKP, nil, false, c, indexed)
 		if err != nil {
 			return nil
 		}
 		for _, f := range fa {
+			if c != nil && c.stopped() {
+				return nil
+			}
 			if _, ok := f.Composite.(*Array); ok {
 				return d2parser.Errorf(refctx.Edge.Src, "cannot index into array")
 			}
@@ -1621,7 +1627,7 @@ func (m *Map) getEdges(eid *EdgeID, refctx *RefContext, gctx *globContext, index
 					parent: f,
 				}
 			}
-			err = f.Map().getEdges(eid, refctx, gctx, indexed, ea)
+			err = f.Map().getEdges(eid, refctx, gctx, c, indexed, ea)
 			if err != nil {
 				return err
 			}
@@ -1629,17 +1635,23 @@ func (m *Map) getEdges(eid *EdgeID, refctx *RefContext, gctx *globContext, index
 		return nil
 	}
 
-	srcFA, err := refctx.ScopeMap.ensureFieldMode(refctx.Edge.Src, nil, false, nil, indexed)
+	srcFA, err := refctx.ScopeMap.ensureFieldMode(refctx.Edge.Src, nil, false, c, indexed)
 	if err != nil {
 		return err
 	}
-	dstFA, err := refctx.ScopeMap.ensureFieldMode(refctx.Edge.Dst, nil, false, nil, indexed)
+	dstFA, err := refctx.ScopeMap.ensureFieldMode(refctx.Edge.Dst, nil, false, c, indexed)
 	if err != nil {
 		return err
 	}
 
 	for _, src := range srcFA {
 		for _, dst := range dstFA {
+			if c != nil && c.stopped() {
+				return nil
+			}
+			if c != nil && (refctx.Edge.Src.HasGlob() || refctx.Edge.Dst.HasGlob()) && !c.reserveEdgeExpansion(refctx.Edge, gctx, src, dst, true) {
+				return nil
+			}
 			eid2 := eid.Copy()
 			eid2.SrcPath = RelIDA(m, src)
 			eid2.DstPath = RelIDA(m, dst)
@@ -1780,6 +1792,9 @@ func (m *Map) createEdge(eid *EdgeID, refctx *RefContext, gctx *globContext, c *
 	for _, src := range srcFA {
 		for _, dst := range dstFA {
 			if c != nil && c.stopped() {
+				return nil
+			}
+			if c != nil && (refctx.Edge.Src.HasGlob() || refctx.Edge.Dst.HasGlob()) && !c.reserveEdgeExpansion(refctx.Edge, gctx, src, dst, false) {
 				return nil
 			}
 			if src == dst && (refctx.Edge.Src.HasGlob() || refctx.Edge.Dst.HasGlob()) {

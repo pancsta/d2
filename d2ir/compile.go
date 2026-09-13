@@ -31,14 +31,17 @@ type globContext struct {
 }
 
 type compiler struct {
-	err               *d2parser.ParseError
-	ctx               context.Context
-	contextErr        error
-	expansionErr      error
-	globExpansionErr  error
-	halted            bool
-	variableExpansion *variableExpansionBudget
-	globExpansion     *globExpansionBudget
+	err                *d2parser.ParseError
+	ctx                context.Context
+	contextErr         error
+	expansionErr       error
+	globExpansionErr   error
+	halted             bool
+	variableExpansion  *variableExpansionBudget
+	globExpansion      *globExpansionBudget
+	edgeExpansion      *edgeExpansionBudget
+	edgeExpansionWork  *edgeExpansionWorkBudget
+	edgeExpansionPairs map[edgeExpansionPair]struct{}
 
 	fs      fs.FS
 	imports []string
@@ -87,6 +90,13 @@ type CompileOptions struct {
 	// materialization. Zero uses DefaultMaxGlobExpansion. Explicit source fields
 	// are not counted as materialization work.
 	MaxGlobExpansion int64
+	// MaxEdgeExpansion bounds distinct edge-segment and endpoint combinations
+	// considered by edge globs. Zero uses DefaultMaxEdgeExpansion. Explicit edges
+	// do not consume this budget.
+	MaxEdgeExpansion int64
+	// MaxEdgeExpansionWork bounds all endpoint-pair examinations performed by
+	// edge globs, including lazy replays. Zero uses DefaultMaxEdgeExpansionWork.
+	MaxEdgeExpansionWork int64
 	// FS resolves imports. Nil disables imports. The lib/localfile package
 	// provides rooted and explicit unrestricted host-filesystem policies.
 	FS fs.FS
@@ -115,12 +125,22 @@ func Compile(ast *d2ast.Map, opts *CompileOptions) (*Map, []string, error) {
 	if err != nil {
 		return nil, nil, err
 	}
+	edgeExpansion, err := newEdgeExpansionBudget(opts.MaxEdgeExpansion)
+	if err != nil {
+		return nil, nil, err
+	}
+	edgeExpansionWork, err := newEdgeExpansionWorkBudget(opts.MaxEdgeExpansionWork)
+	if err != nil {
+		return nil, nil, err
+	}
 	c := &compiler{
 		err:               &d2parser.ParseError{},
 		ctx:               ctx,
 		fs:                opts.FS,
 		variableExpansion: variableExpansion,
 		globExpansion:     globExpansion,
+		edgeExpansion:     edgeExpansion,
+		edgeExpansionWork: edgeExpansionWork,
 
 		seenImports:             make(map[string]struct{}),
 		parsedImports:           make(map[string]*d2ast.Map),
