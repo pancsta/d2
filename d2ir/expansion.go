@@ -63,6 +63,12 @@ func (c *compiler) stopped() bool {
 	if c.variableExpansion == nil {
 		c.variableExpansion = &variableExpansionBudget{limit: DefaultMaxVariableExpansion}
 	}
+	if c.edgeExpansion == nil {
+		c.edgeExpansion = &edgeExpansionBudget{limit: DefaultMaxEdgeExpansion}
+	}
+	if c.edgeExpansionWork == nil {
+		c.edgeExpansionWork = &edgeExpansionWorkBudget{limit: DefaultMaxEdgeExpansionWork}
+	}
 	if err := c.ctx.Err(); err != nil {
 		c.contextErr = err
 		c.halted = true

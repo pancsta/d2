@@ -37,6 +37,25 @@ func TestCompilePropagatesVariableExpansionLimit(t *testing.T) {
 	}
 }
 
+func TestCompilePropagatesEdgeExpansionLimit(t *testing.T) {
+	_, _, err := Compile(context.Background(), "a\nb\nc\n* -> *\n", &CompileOptions{
+		MaxEdgeExpansion: 8,
+	}, nil)
+	if err == nil || !strings.Contains(err.Error(), "edge glob expansion exceeds limit of 8 endpoint pairs") {
+		t.Fatalf("Compile() error = %v, want edge expansion limit", err)
+	}
+}
+
+func TestCompilePropagatesEdgeExpansionWorkLimit(t *testing.T) {
+	_, _, err := Compile(context.Background(), "(* -> *)[*].style.opacity: 0\na\nb\nc\n", &CompileOptions{
+		MaxEdgeExpansion:     9,
+		MaxEdgeExpansionWork: 9,
+	}, nil)
+	if err == nil || !strings.Contains(err.Error(), "work limit of 9 endpoint-pair examinations") {
+		t.Fatalf("Compile() error = %v, want edge expansion work limit", err)
+	}
+}
+
 func TestNilFSDeniesImports(t *testing.T) {
 	directory := t.TempDir()
 	if err := os.WriteFile(filepath.Join(directory, "secret.d2"), []byte("disclosed"), 0o600); err != nil {
