@@ -37,6 +37,15 @@ func TestCompilePropagatesVariableExpansionLimit(t *testing.T) {
 	}
 }
 
+func TestCompilePropagatesGlobExpansionLimit(t *testing.T) {
+	_, _, err := Compile(context.Background(), "**.a\n**.b\n**.c\nx\n", &CompileOptions{
+		MaxGlobExpansion: 64,
+	}, nil)
+	if err == nil || !strings.Contains(err.Error(), "glob expansion exceeds limit of 64 work units") {
+		t.Fatalf("Compile() error = %v, want glob expansion limit", err)
+	}
+}
+
 func TestNilFSDeniesImports(t *testing.T) {
 	directory := t.TempDir()
 	if err := os.WriteFile(filepath.Join(directory, "secret.d2"), []byte("disclosed"), 0o600); err != nil {

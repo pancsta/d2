@@ -63,6 +63,9 @@ func (c *compiler) stopped() bool {
 	if c.variableExpansion == nil {
 		c.variableExpansion = &variableExpansionBudget{limit: DefaultMaxVariableExpansion}
 	}
+	if c.globExpansion == nil {
+		c.globExpansion = &globExpansionBudget{limit: DefaultMaxGlobExpansion}
+	}
 	if err := c.ctx.Err(); err != nil {
 		c.contextErr = err
 		c.halted = true
