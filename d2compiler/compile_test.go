@@ -58,6 +58,72 @@ func TestOpacityValidation(t *testing.T) {
 	}
 }
 
+func TestGridCapacityLimit(t *testing.T) {
+	t.Parallel()
+
+	maxInt := int(^uint(0) >> 1)
+	for _, tc := range []struct {
+		name    string
+		rows    int
+		columns int
+		wantErr string
+	}{
+		{name: "max_int_panic_regression", rows: maxInt, columns: maxInt, wantErr: fmt.Sprintf("exceeds the maximum of %d", d2graph.MaxGridDimension)},
+		{name: "allocator_amplification_regression", rows: 20_000_000, columns: 20_000_000, wantErr: fmt.Sprintf("exceeds the maximum of %d", d2graph.MaxGridDimension)},
+		{name: "exact_dimension_limit", rows: d2graph.MaxGridDimension, columns: 1},
+		{name: "over_dimension_limit", rows: d2graph.MaxGridDimension + 1, columns: 1, wantErr: fmt.Sprintf("exceeds the maximum of %d", d2graph.MaxGridDimension)},
+		{name: "exact_cell_limit", rows: 1_000, columns: 1_000},
+		{name: "over_cell_limit", rows: 1_000, columns: 1_001, wantErr: fmt.Sprintf("exceed the limit of %d cells", d2graph.MaxGridCells)},
+	} {
+		tc := tc
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+			script := fmt.Sprintf("grid: {\n  grid-rows: %d\n  grid-columns: %d\n  cell\n}", tc.rows, tc.columns)
+			g, _, err := d2compiler.Compile("grid-capacity.d2", strings.NewReader(script), nil)
+			if tc.wantErr == "" {
+				assert.Success(t, err)
+				tassert.NotNil(t, g)
+				return
+			}
+			tassert.Nil(t, g)
+			tassert.ErrorContains(t, err, tc.wantErr)
+		})
+	}
+}
+
+func TestSingleGridDimensionLimit(t *testing.T) {
+	t.Parallel()
+
+	for _, keyword := range []string{"grid-rows", "grid-columns"} {
+		keyword := keyword
+		t.Run(keyword, func(t *testing.T) {
+			t.Parallel()
+			for _, tc := range []struct {
+				name    string
+				value   int
+				wantErr bool
+			}{
+				{name: "exact_limit", value: d2graph.MaxGridDimension},
+				{name: "over_limit", value: d2graph.MaxGridDimension + 1, wantErr: true},
+			} {
+				tc := tc
+				t.Run(tc.name, func(t *testing.T) {
+					t.Parallel()
+					script := fmt.Sprintf("grid: {\n  %s: %d\n  cell\n}", keyword, tc.value)
+					g, _, err := d2compiler.Compile("grid-dimension.d2", strings.NewReader(script), nil)
+					if !tc.wantErr {
+						assert.Success(t, err)
+						tassert.NotNil(t, g)
+						return
+					}
+					tassert.Nil(t, g)
+					tassert.ErrorContains(t, err, fmt.Sprintf("%s %d exceeds the maximum of %d", keyword, tc.value, d2graph.MaxGridDimension))
+				})
+			}
+		})
+	}
+}
+
 func TestClassReferenceCycle(t *testing.T) {
 	t.Parallel()
 

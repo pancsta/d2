@@ -146,6 +146,10 @@ func (c *compiler) compileBoard(g *d2graph.Graph, ir *d2ir.Map) *d2graph.Graph {
 	if c.stopped() {
 		return g
 	}
+	c.validateGridDimensions(g)
+	if c.stopped() {
+		return g
+	}
 	c.setDefaultShapes(g)
 	if c.stopped() {
 		return g
@@ -197,6 +201,34 @@ func (c *compiler) compileBoard(g *d2graph.Graph, ir *d2ir.Map) *d2graph.Graph {
 		g.IsFolderOnly = true
 	}
 	return g
+}
+
+func (c *compiler) validateGridDimensions(g *d2graph.Graph) {
+	objects := make([]*d2graph.Object, 0, len(g.Objects)+1)
+	objects = append(objects, g.Root)
+	objects = append(objects, g.Objects...)
+	for _, obj := range objects {
+		if c.stopped() {
+			return
+		}
+		if obj.GridRows == nil || obj.GridColumns == nil {
+			continue
+		}
+		rows, rowsErr := strconv.Atoi(obj.GridRows.Value)
+		columns, columnsErr := strconv.Atoi(obj.GridColumns.Value)
+		if rowsErr != nil || columnsErr != nil {
+			// compileReserved reports malformed and out-of-range integers at the
+			// attribute itself. Avoid adding a less specific follow-on error.
+			continue
+		}
+		if _, err := d2graph.GridCapacity(rows, columns); err != nil {
+			key := obj.GridColumns.MapKey
+			if key.Range.Before(obj.GridRows.MapKey.Range) {
+				key = obj.GridRows.MapKey
+			}
+			c.errorf(key, "%v", err)
+		}
+	}
 }
 
 func hasBoardFields(ir *d2ir.Map) bool {
@@ -1003,6 +1035,10 @@ func (c *compiler) compileReserved(attrs *d2graph.Attributes, f *d2ir.Field) {
 			c.errorf(scalar, "grid-rows must be a positive integer: %#v", scalar.ScalarString())
 			return
 		}
+		if v > d2graph.MaxGridDimension {
+			c.errorf(scalar, "grid-rows %d exceeds the maximum of %d", v, d2graph.MaxGridDimension)
+			return
+		}
 		attrs.GridRows = &d2graph.Scalar{}
 		attrs.GridRows.Value = scalar.ScalarString()
 		attrs.GridRows.MapKey = f.LastPrimaryKey()
@@ -1014,6 +1050,10 @@ func (c *compiler) compileReserved(attrs *d2graph.Attributes, f *d2ir.Field) {
 		}
 		if v <= 0 {
 			c.errorf(scalar, "grid-columns must be a positive integer: %#v", scalar.ScalarString())
+			return
+		}
+		if v > d2graph.MaxGridDimension {
+			c.errorf(scalar, "grid-columns %d exceeds the maximum of %d", v, d2graph.MaxGridDimension)
 			return
 		}
 		attrs.GridColumns = &d2graph.Scalar{}
