@@ -42,6 +42,9 @@
     configure the limit. [#2923](https://github.com/d2lang/d2/pull/2923)
   - Honor cancellation while expanding substitutions and materializing compiled
     graphs. [#2923](https://github.com/d2lang/d2/pull/2923)
+  - Limit recursive glob matching and generated-field work so small diagrams
+    fail with a clear error instead of consuming excessive CPU or memory.
+    [#2925](https://github.com/d2lang/d2/pull/2925)
 - decoding and assets:
   - Cap decompressed URL-encoded D2 input at 16 MiB. [#2902](https://github.com/d2lang/d2/pull/2902)
   - Bound image references, locators, fetched and decoded bytes, cached data, and
