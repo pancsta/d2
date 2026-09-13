@@ -1214,6 +1214,12 @@ func (m *Map) ensureFieldMode(kp *d2ast.KeyPath, refctx *RefContext, create bool
 }
 
 func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create bool, gctx *globContext, c *compiler, indexed bool, fa, created *[]*Field) error {
+	visitGlobCandidate := func(*Field) bool {
+		if c == nil || gctx == nil {
+			return true
+		}
+		return c.reserveGlobWork(c.globSource(refctx), 1)
+	}
 	filter := func(f *Field, passthrough bool) bool {
 		if gctx != nil {
 			var ks string
@@ -1255,10 +1261,13 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 		var multi bool
 		if c != nil && c.lazyGlobTarget != nil && gctx != nil &&
 			(d2ast.IsDoubleGlob(us.Pattern) || d2ast.IsTripleGlob(us.Pattern)) {
-			fa2 = m.multiGlobMatchesToward(c.lazyGlobTarget, us.Pattern)
+			fa2 = m.multiGlobMatchesToward(c.lazyGlobTarget, us.Pattern, visitGlobCandidate)
 			multi = true
 		} else {
-			fa2, multi = m.multiGlob(us.Pattern)
+			fa2, multi = m.multiGlob(us.Pattern, visitGlobCandidate)
+		}
+		if c != nil && c.stopped() {
+			return nil
 		}
 		if multi {
 			if i == len(kp.Path)-1 {
@@ -1290,6 +1299,9 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 			}
 		}
 		for _, f := range fields {
+			if !visitGlobCandidate(f) {
+				return nil
+			}
 			if f.Name == nil {
 				continue
 			}
@@ -1346,12 +1358,14 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 	if f := existing; f != nil {
 		// Don't add references for fake common KeyPath from trimCommon in CreateEdge.
 		if refctx != nil {
+			dueToGlob := c != nil && len(c.globRefContextStack) > 0
+			dueToLazyGlob := c != nil && c.lazyGlobBeingApplied
 			f.appendReference(&FieldReference{
 				String:         kp.Path[i].Unbox(),
 				KeyPath:        kp,
 				Context_:       refctx,
-				DueToGlob_:     len(c.globRefContextStack) > 0,
-				DueToLazyGlob_: c.lazyGlobBeingApplied,
+				DueToGlob_:     dueToGlob,
+				DueToLazyGlob_: dueToLazyGlob,
 			})
 		}
 
@@ -1376,9 +1390,16 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 	if !create {
 		return nil
 	}
-	if _, ok := d2ast.ReservedKeywords[strings.ToLower(head.ScalarString())]; !(ok && head.IsUnquoted()) && len(c.globRefContextStack) > 0 {
+	if _, ok := d2ast.ReservedKeywords[strings.ToLower(head.ScalarString())]; !(ok && head.IsUnquoted()) && c != nil && len(c.globRefContextStack) > 0 {
 		shape := ParentShape(m)
 		if shape == d2target.ShapeClass || shape == d2target.ShapeSQLTable {
+			return nil
+		}
+	}
+	var globSource d2ast.Node
+	if c != nil && len(c.globRefContextStack) > 0 {
+		globSource = c.globSource(refctx)
+		if !c.reserveGlobGeneratedFieldWork(m, globSource) {
 			return nil
 		}
 	}
@@ -1387,7 +1408,7 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 		Name:   kp.Path[i].Unbox(),
 	}
 	defer func() {
-		if i < kp.FirstGlob() {
+		if c == nil || i < kp.FirstGlob() {
 			return
 		}
 		for _, grefctx := range c.globRefContextStack {
@@ -1403,16 +1424,23 @@ func (m *Map) ensureField(i int, kp *d2ast.KeyPath, refctx *RefContext, create b
 	}()
 	// Don't add references for fake common KeyPath from trimCommon in CreateEdge.
 	if refctx != nil {
+		dueToGlob := c != nil && len(c.globRefContextStack) > 0
+		dueToLazyGlob := c != nil && c.lazyGlobBeingApplied
 		f.appendReference(&FieldReference{
 			String:         kp.Path[i].Unbox(),
 			KeyPath:        kp,
 			Context_:       refctx,
-			DueToGlob_:     len(c.globRefContextStack) > 0,
-			DueToLazyGlob_: c.lazyGlobBeingApplied,
+			DueToGlob_:     dueToGlob,
+			DueToLazyGlob_: dueToLazyGlob,
 		})
 	}
 	if !filter(f, true) {
 		return nil
+	}
+	if c != nil && len(c.globRefContextStack) > 0 {
+		if !c.reserveGlobField(globSource) {
+			return nil
+		}
 	}
 	m.appendField(f)
 	*created = append(*created, f)

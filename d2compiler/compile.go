@@ -34,6 +34,10 @@ type CompileOptions struct {
 	// MaxVariableExpansion bounds work added by variable substitutions and the
 	// automatic copies they induce. Zero uses d2ir.DefaultMaxVariableExpansion.
 	MaxVariableExpansion int64
+	// MaxGlobExpansion bounds work performed by glob matching and
+	// materialization. Zero uses d2ir.DefaultMaxGlobExpansion. Explicit source
+	// fields are not counted as materialization work.
+	MaxGlobExpansion int64
 	// FS is the file system used for resolving imports in the D2 text. Nil
 	// disables imports. Callers that accept untrusted input should prefer a
 	// filesystem constrained to the intended import root; lib/localfile provides
@@ -57,6 +61,7 @@ func Compile(p string, r io.Reader, opts *CompileOptions) (*d2graph.Graph, *d2ta
 		Context:              opts.Context,
 		UTF16Pos:             opts.UTF16Pos,
 		MaxVariableExpansion: opts.MaxVariableExpansion,
+		MaxGlobExpansion:     opts.MaxGlobExpansion,
 		FS:                   opts.FS,
 	})
 	if err != nil {
