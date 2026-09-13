@@ -35,8 +35,10 @@ type compiler struct {
 	ctx                context.Context
 	contextErr         error
 	expansionErr       error
+	globExpansionErr   error
 	halted             bool
 	variableExpansion  *variableExpansionBudget
+	globExpansion      *globExpansionBudget
 	edgeExpansion      *edgeExpansionBudget
 	edgeExpansionWork  *edgeExpansionWorkBudget
 	edgeExpansionPairs map[edgeExpansionPair]struct{}
@@ -84,6 +86,10 @@ type CompileOptions struct {
 	// MaxVariableExpansion bounds work added by substitutions and automatic
 	// copies. Zero uses DefaultMaxVariableExpansion.
 	MaxVariableExpansion int64
+	// MaxGlobExpansion bounds work performed by glob matching and
+	// materialization. Zero uses DefaultMaxGlobExpansion. Explicit source fields
+	// are not counted as materialization work.
+	MaxGlobExpansion int64
 	// MaxEdgeExpansion bounds distinct edge-segment and endpoint combinations
 	// considered by edge globs. Zero uses DefaultMaxEdgeExpansion. Explicit edges
 	// do not consume this budget.
@@ -115,6 +121,10 @@ func Compile(ast *d2ast.Map, opts *CompileOptions) (*Map, []string, error) {
 	if err != nil {
 		return nil, nil, err
 	}
+	globExpansion, err := newGlobExpansionBudget(opts.MaxGlobExpansion)
+	if err != nil {
+		return nil, nil, err
+	}
 	edgeExpansion, err := newEdgeExpansionBudget(opts.MaxEdgeExpansion)
 	if err != nil {
 		return nil, nil, err
@@ -128,6 +138,7 @@ func Compile(ast *d2ast.Map, opts *CompileOptions) (*Map, []string, error) {
 		ctx:               ctx,
 		fs:                opts.FS,
 		variableExpansion: variableExpansion,
+		globExpansion:     globExpansion,
 		edgeExpansion:     edgeExpansion,
 		edgeExpansionWork: edgeExpansionWork,
 
@@ -152,25 +163,22 @@ func Compile(ast *d2ast.Map, opts *CompileOptions) (*Map, []string, error) {
 	if c.contextErr != nil {
 		return nil, nil, c.contextErr
 	}
+	if err := c.compileLimitError(); err != nil {
+		return nil, nil, err
+	}
 	c.compileSubstitutions(m, nil)
 	if c.contextErr != nil {
 		return nil, nil, c.contextErr
 	}
-	if c.expansionErr != nil {
-		if !c.err.Empty() {
-			return nil, nil, c.err
-		}
-		return nil, nil, c.expansionErr
+	if err := c.compileLimitError(); err != nil {
+		return nil, nil, err
 	}
 	c.overlayClasses(m)
 	if c.contextErr != nil {
 		return nil, nil, c.contextErr
 	}
-	if c.expansionErr != nil {
-		if !c.err.Empty() {
-			return nil, nil, c.err
-		}
-		return nil, nil, c.expansionErr
+	if err := c.compileLimitError(); err != nil {
+		return nil, nil, err
 	}
 	// Substitutions can grow shared nodes after an earlier alias inserted them
 	// (for example through a forward scalar chain in an array spread). Recheck
@@ -182,13 +190,26 @@ func Compile(ast *d2ast.Map, opts *CompileOptions) (*Map, []string, error) {
 	if err := ctx.Err(); err != nil {
 		return nil, nil, err
 	}
-	if c.expansionErr != nil && c.err.Empty() {
-		return nil, nil, c.expansionErr
+	if err := c.compileLimitError(); err != nil {
+		return nil, nil, err
 	}
 	if !c.err.Empty() {
 		return nil, nil, c.err
 	}
 	return m, c.imports, nil
+}
+
+func (c *compiler) compileLimitError() error {
+	if c.expansionErr == nil && c.globExpansionErr == nil {
+		return nil
+	}
+	if !c.err.Empty() {
+		return c.err
+	}
+	if c.expansionErr != nil {
+		return c.expansionErr
+	}
+	return c.globExpansionErr
 }
 
 func (c *compiler) overlayClasses(m *Map) {
@@ -1021,6 +1042,11 @@ func (c *compiler) compileMap(dst *Map, ast, scopeAST *d2ast.Map) {
 			})
 		case n.Substitution != nil:
 			// placeholder field to be resolved at the end
+			if len(c.globRefContextStack) > 0 {
+				if !c.reserveGlobGeneratedFieldWork(dst, n.Substitution) || !c.reserveGlobField(n.Substitution) {
+					return
+				}
+			}
 			f := &Field{
 				parent: dst,
 				Primary_: &Scalar{
@@ -1137,6 +1163,11 @@ func (c *compiler) compileKey(refctx *RefContext) {
 		return
 	}
 	postTargetStart := len(c.lazyPostTargets)
+	if refctx.Key.HasGlob() || len(c.globRefContextStack) > 0 {
+		if !c.reserveGlobWork(refctx.Key, 1) {
+			return
+		}
+	}
 	if refctx.Key.HasGlob() {
 		for _, refctx2 := range c.globRefContextStack {
 			if refctx.Equal(refctx2) {
@@ -2259,8 +2290,12 @@ func (c *compiler) compileArray(dst *Array, a *d2ast.Array, scopeAST *d2ast.Map)
 		if c.stopped() {
 			return
 		}
+		arrayNode := an.Unbox()
+		if len(c.globRefContextStack) > 0 && !c.reserveGlobWork(arrayNode, 1) {
+			return
+		}
 		var irv Value
-		switch v := an.Unbox().(type) {
+		switch v := arrayNode.(type) {
 		case *d2ast.Array:
 			ira := &Array{
 				parent: dst,

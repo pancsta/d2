@@ -42,6 +42,9 @@
     configure the limit. [#2923](https://github.com/d2lang/d2/pull/2923)
   - Honor cancellation while expanding substitutions and materializing compiled
     graphs. [#2923](https://github.com/d2lang/d2/pull/2923)
+  - Limit recursive glob matching and generated-field work so small diagrams
+    fail with a clear error instead of consuming excessive CPU or memory.
+    [#2925](https://github.com/d2lang/d2/pull/2925)
   - Limit wildcard edge connections and selectors to bounded expansion work,
     returning a clear error before excessive fanout consumes resources.
     [#2926](https://github.com/d2lang/d2/pull/2926)
@@ -56,6 +59,9 @@
     rendering. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit raw graphs to 1,024 levels and 4,096 boards. [#2912](https://github.com/d2lang/d2/pull/2912)
   - Limit LaTeX labels to 4 KiB and 128 nested groups. [#2922](https://github.com/d2lang/d2/pull/2922)
+  - Limit grids to 10,000 rows or columns and 1,000,000 total cells, returning
+    a clear error for oversized dimensions instead of crashing or exhausting
+    memory. [#2924](https://github.com/d2lang/d2/pull/2924)
   - Limit Dagre and ELK inputs to 1,024 objects and 1,024 edges, and reject
     overly interconnected graphs before entering non-cancellable layout.
     [#2926](https://github.com/d2lang/d2/pull/2926)
