@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 var commonAttributes = func() map[string]struct{} {

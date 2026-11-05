@@ -14,7 +14,7 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/unicode/norm"
 
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2target"
 )
 
 const (

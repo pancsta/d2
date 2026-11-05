@@ -16,17 +16,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2renderers/d2svgimport"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/imageasset"
-	"github.com/d2lang/d2/lib/localfile"
-	"github.com/d2lang/d2/lib/netpolicy"
-	"github.com/d2lang/d2/lib/xgif"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2renderers/d2svgimport"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/imageasset"
+	"github.com/pancsta/d2/lib/localfile"
+	"github.com/pancsta/d2/lib/netpolicy"
+	"github.com/pancsta/d2/lib/xgif"
 )
 
 func renderRasterSVG(diagram *d2target.Diagram, opts d2svg.RenderOpts, returnSVG bool) ([]byte, error) {

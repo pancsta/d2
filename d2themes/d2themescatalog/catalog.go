@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/d2lang/d2/d2themes"
+	"github.com/pancsta/d2/d2themes"
 )
 
 var LightCatalog = []d2themes.Theme{

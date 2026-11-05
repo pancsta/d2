@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2isometric/d2isometricimg"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2isometric/d2isometricimg"
+	"github.com/pancsta/d2/d2target"
 	"github.com/d2lang/util-go/go2"
 )
 

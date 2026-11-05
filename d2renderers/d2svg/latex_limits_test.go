@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2latex"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2renderers/d2latex"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/lib/label"
 )
 
 func TestRenderRejectsExcessiveLatexGroupNesting(t *testing.T) {

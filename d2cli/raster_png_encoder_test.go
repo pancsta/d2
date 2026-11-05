@@ -18,9 +18,9 @@ import (
 	"github.com/d2lang/util-go/xmain"
 	"github.com/d2lang/util-go/xos"
 
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
 )
 
 func TestRasterPNGEncoderMatchesStatelessEncoder(t *testing.T) {

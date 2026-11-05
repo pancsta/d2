@@ -5,9 +5,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 // Presentation copies can lift a nested plate within the clearance below the

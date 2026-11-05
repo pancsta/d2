@@ -5,8 +5,8 @@ import (
 	"math"
 	"sort"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 // An endpoint owns only its own solid, never its containing platforms or

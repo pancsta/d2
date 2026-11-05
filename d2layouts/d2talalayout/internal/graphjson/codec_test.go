@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/label"
 )
 
 type cancelWhenStackContains struct {

@@ -1,6 +1,6 @@
 package grouping
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 // ResetClusters removes inactive vessel metadata so a later layout rediscovers
 // clusters from ordinary nodes and edges.

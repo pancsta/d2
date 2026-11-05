@@ -7,7 +7,7 @@ import (
 	_ "embed"
 	"strings"
 
-	"github.com/d2lang/d2/lib/syncmap"
+	"github.com/pancsta/d2/lib/syncmap"
 )
 
 //go:embed encoded/SourceSansPro-Regular.txt

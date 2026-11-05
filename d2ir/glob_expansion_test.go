@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2parser"
+	"github.com/pancsta/d2/d2parser"
 )
 
 func TestGlobExpansionBudgetDefault(t *testing.T) {

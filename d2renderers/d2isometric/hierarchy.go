@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2target"
 )
 
 // composeHierarchy is a projection of the compiled layout, not a second layout.

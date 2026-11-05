@@ -24,8 +24,8 @@ import (
 	_ "golang.org/x/image/webp"
 	"golang.org/x/text/encoding/charmap"
 
-	"github.com/d2lang/d2/internal/rasterimage"
-	libsvg "github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/internal/rasterimage"
+	libsvg "github.com/pancsta/d2/lib/svg"
 )
 
 var errUnsupportedSVG = errors.New("unsupported SVG")

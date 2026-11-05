@@ -1,9 +1,9 @@
 package hierarchy
 
 import (
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/nodeshape"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/nodeshape"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 // Candidates identifies the graph nodes that may participate in hierarchy

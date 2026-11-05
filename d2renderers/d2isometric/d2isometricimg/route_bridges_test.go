@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
 )
 
 func bridgeTestEdge(id string, points ...Vec) d2isometric.Edge {

@@ -3,7 +3,7 @@ package layoutgraph
 import (
 	"context"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
 )
 
 func updateGraphStateForTest(gs *GraphState, g *Graph) {

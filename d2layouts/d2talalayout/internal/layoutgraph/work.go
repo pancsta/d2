@@ -1,6 +1,6 @@
 package layoutgraph
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
 
 const (
 	// Keep the established engine-local names while the surrounding layout

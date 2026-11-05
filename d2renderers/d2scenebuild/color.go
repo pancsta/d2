@@ -7,10 +7,10 @@ import (
 
 	"github.com/mazznoer/csscolorparser"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/scenepaint"
-	"github.com/d2lang/d2/d2themes"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/scenepaint"
+	"github.com/pancsta/d2/d2themes"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 func (b *builder) paint(raw, description string) (d2scene.Paint, error) {

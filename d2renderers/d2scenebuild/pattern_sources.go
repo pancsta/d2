@@ -12,9 +12,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2svgimport"
-	"github.com/d2lang/d2/d2renderers/internal/patternassets"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2svgimport"
+	"github.com/pancsta/d2/d2renderers/internal/patternassets"
 )
 
 const (

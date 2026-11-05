@@ -4,7 +4,7 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 type bundledFaceSpec struct {

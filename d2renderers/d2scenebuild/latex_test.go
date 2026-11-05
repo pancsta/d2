@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2latex"
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2latex"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2target"
 )
 
 func TestBuildLatexShapeAndConnectionLabels(t *testing.T) {

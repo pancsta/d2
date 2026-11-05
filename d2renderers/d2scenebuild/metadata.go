@@ -7,10 +7,10 @@ import (
 	"net/url"
 	"unicode/utf8"
 
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 func (b *builder) compileLinkRegions() error {

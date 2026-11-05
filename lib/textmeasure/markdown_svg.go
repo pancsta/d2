@@ -14,8 +14,8 @@ import (
 	goldmarkHTML "github.com/yuin/goldmark/renderer/html"
 	"golang.org/x/net/html"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 // MarkdownPrimitiveKind identifies the kind of native SVG primitive in a

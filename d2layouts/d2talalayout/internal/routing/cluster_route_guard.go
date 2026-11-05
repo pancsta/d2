@@ -3,8 +3,8 @@ package routing
 import (
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func estimateRouteCostGuarded(edges layoutgraph.Edges, edge *layoutgraph.Edge, guard workBudget) (float64, error) {

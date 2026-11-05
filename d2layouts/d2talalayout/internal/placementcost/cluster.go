@@ -1,6 +1,6 @@
 package placementcost
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 func clusterExactlyTwoExternalConnectedNodes(cluster *layoutgraph.Cluster) (first, second *layoutgraph.Node, exactlyTwo bool) {
 	currentGraph := cluster.Nodes[0].Graph

@@ -1,6 +1,6 @@
 package routing
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 type idealTurnAxis struct {
 	isX bool

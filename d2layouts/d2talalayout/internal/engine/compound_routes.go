@@ -4,13 +4,13 @@ import (
 	"context"
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labelgeom"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placement"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labelgeom"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placement"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
 )
 
 // PreserveCompoundRoutes refines an already-selected compound drawing. Keep

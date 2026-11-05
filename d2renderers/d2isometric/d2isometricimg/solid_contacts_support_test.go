@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
 )
 
 // Build the intended world-space barrel directly, independently of the

@@ -8,7 +8,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 // PathLimits are caller-selected hard limits for one SVG path data string.

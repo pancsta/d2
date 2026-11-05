@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 func TestRenderTypedAnimationAtTimeWithoutMutation(t *testing.T) {

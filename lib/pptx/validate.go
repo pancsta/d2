@@ -1,6 +1,6 @@
 package pptx
 
-import "github.com/d2lang/d2/internal/testutil"
+import "github.com/pancsta/d2/internal/testutil"
 
 // Validate checks that pptxContent contains the structure emitted by D2's PPTX
 // exporter for nSlides.

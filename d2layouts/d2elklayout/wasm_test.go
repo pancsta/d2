@@ -10,8 +10,8 @@ import (
 
 	"github.com/d2lang/util-go/go2"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func TestConvertGraphPreservesCustomELKProfile(t *testing.T) {

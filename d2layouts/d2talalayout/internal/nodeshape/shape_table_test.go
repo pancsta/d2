@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func TestSnapPointPercentages(t *testing.T) {

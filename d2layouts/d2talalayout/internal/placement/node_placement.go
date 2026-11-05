@@ -7,14 +7,14 @@ import (
 	"math/rand"
 	"slices"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/grouping"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/loops"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/packing"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/proximity"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/trees"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/grouping"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/loops"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/packing"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/proximity"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/trees"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // placeNodes is phase 1 of the algorithm

@@ -5,10 +5,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2layouts/d2elklayout"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2layouts/d2elklayout"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func TestAncestorDescendantEdgeMatchesELKJS(t *testing.T) {

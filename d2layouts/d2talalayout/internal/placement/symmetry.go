@@ -4,8 +4,8 @@ import (
 	"context"
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placementcost"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placementcost"
 )
 
 // BalanceSymmetry centers simple nodes among neighbors aligned on one side.

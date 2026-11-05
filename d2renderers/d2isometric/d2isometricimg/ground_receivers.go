@@ -1,6 +1,6 @@
 package d2isometricimg
 
-import "github.com/d2lang/d2/d2renderers/d2isometric"
+import "github.com/pancsta/d2/d2renderers/d2isometric"
 
 // Move a caster only along the viewing ray. Its screen location is unchanged,
 // but its shadow on the common receiver now has exactly the projection of its

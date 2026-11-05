@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 var reliefTestKinds = []string{d2target.ShapeCloud, d2target.ShapePerson, d2target.ShapeC4Person}

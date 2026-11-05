@@ -9,8 +9,8 @@ import (
 	"golang.org/x/image/font/sfnt"
 	"golang.org/x/image/math/fixed"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 func (w *nativeSurfaceSVGWriter) font(id d2scene.AssetID) (*fontface.ParsedFace, error) {

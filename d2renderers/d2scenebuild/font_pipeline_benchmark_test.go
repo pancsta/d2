@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2target"
 )
 
 var benchmarkDocument any

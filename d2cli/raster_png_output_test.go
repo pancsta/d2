@@ -15,10 +15,10 @@ import (
 	"github.com/d2lang/util-go/go2"
 	"github.com/d2lang/util-go/xmain"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	d2png "github.com/d2lang/d2/lib/png"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	d2png "github.com/pancsta/d2/lib/png"
 )
 
 func TestPNGStreamMatchesCompleteFrame(t *testing.T) {

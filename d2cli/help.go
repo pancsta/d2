@@ -8,8 +8,8 @@ import (
 
 	"github.com/d2lang/util-go/xmain"
 
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
+	"github.com/pancsta/d2/lib/version"
 )
 
 func help(ms *xmain.State) {
@@ -54,7 +54,7 @@ Subcommands:
 	%[1]s play file.d2 - Opens the file in playground, an online web viewer (https://play.d2lang.com)
   %[1]s validate file.d2  - Validates file.d2
 
-See more docs and the source code at https://github.com/d2lang/d2.
+See more docs and the source code at https://github.com/pancsta/d2.
 Hosted icons at https://icons.d2lang.com.
 Playground runner at https://play.d2lang.com.
 `, filepath.Base(ms.Name), version.Version, ms.Opts.Defaults())

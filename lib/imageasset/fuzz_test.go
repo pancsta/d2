@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/d2lang/d2/internal/rasterimage"
+	"github.com/pancsta/d2/internal/rasterimage"
 )
 
 func FuzzDataURI(f *testing.F) {

@@ -16,8 +16,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/d2lang/d2/lib/localfile"
-	"github.com/d2lang/d2/lib/netpolicy"
+	"github.com/pancsta/d2/lib/localfile"
+	"github.com/pancsta/d2/lib/netpolicy"
 )
 
 // Preserve imgbundler's worker ceiling so per-resource byte limits also bound

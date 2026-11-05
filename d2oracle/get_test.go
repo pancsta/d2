@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/d2oracle"
+	"github.com/pancsta/d2/d2oracle"
 )
 
 func TestIsLabelKeyID(t *testing.T) {

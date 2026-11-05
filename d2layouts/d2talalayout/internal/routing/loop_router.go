@@ -1,6 +1,6 @@
 package routing
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 // makeLoopRoute makes a `Route` based on the edge points
 func makeLoopRoute(e *layoutgraph.Edge, ovg *OVG) *Route {

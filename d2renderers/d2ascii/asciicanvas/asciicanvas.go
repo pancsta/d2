@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/d2lang/d2/d2renderers/d2ascii/charset"
+	"github.com/pancsta/d2/d2renderers/d2ascii/charset"
 )
 
 type Canvas struct {

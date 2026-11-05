@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2target"
 )
 
 func TestEnsureChildCanonicalIDs(t *testing.T) {

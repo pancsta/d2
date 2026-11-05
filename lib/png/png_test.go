@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/lib/version"
 )
 
 func TestStaticRasterScale(t *testing.T) {

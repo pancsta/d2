@@ -11,7 +11,7 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
 )
 
 func routeFlavorTestRouters() []*ovgEdgeRouter {

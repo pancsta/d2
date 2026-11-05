@@ -1,6 +1,6 @@
 package layoutgraph
 
-import "github.com/d2lang/d2/lib/label"
+import "github.com/pancsta/d2/lib/label"
 
 // Label is the label state attached to a layout node or edge.
 type Label struct {

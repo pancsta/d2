@@ -15,10 +15,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/imageasset"
-	"github.com/d2lang/d2/lib/localfile"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/imageasset"
+	"github.com/pancsta/d2/lib/localfile"
 )
 
 const surfaceTestSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20"><rect width="20" height="20" fill="#ff0000"/><rect x="20" width="20" height="20" fill="#0000ff" fill-opacity="0.5"/></svg>`

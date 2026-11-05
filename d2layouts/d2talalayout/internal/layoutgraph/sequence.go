@@ -4,9 +4,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 type Sequence struct {

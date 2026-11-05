@@ -7,7 +7,7 @@ import (
 	"encoding/base64"
 	"sync"
 
-	"github.com/d2lang/d2/lib/compression"
+	"github.com/pancsta/d2/lib/compression"
 )
 
 //go:embed paper.txt.br

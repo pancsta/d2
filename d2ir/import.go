@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2parser"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2parser"
 )
 
 // ErrImportsDisabled is returned when D2 source requests an import but the

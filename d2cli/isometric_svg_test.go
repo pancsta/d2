@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric/d2isometricimg"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric/d2isometricimg"
+	"github.com/pancsta/d2/d2target"
 )
 
 func inspectIsometricSVG(t *testing.T, data []byte) (map[string]string, []string) {

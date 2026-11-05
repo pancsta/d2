@@ -5,7 +5,7 @@ import (
 	"context"
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 // Score preserves the original TALA penalty and separate area tie-breaker.

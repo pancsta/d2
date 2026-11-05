@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 // DefaultMaxGlobExpansion is the maximum amount of work globs may perform

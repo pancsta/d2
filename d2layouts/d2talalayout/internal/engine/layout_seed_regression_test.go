@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/graphjson"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/graphjson"
 )
 
 // These compact goldens cover complete placement, routing, labeling, and

@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/engine"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/engine"
 )
 
 const (

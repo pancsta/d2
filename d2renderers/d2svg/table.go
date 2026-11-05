@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/d2themes"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/d2themes"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
+	"github.com/pancsta/d2/lib/svg"
 	"github.com/d2lang/util-go/go2"
 )
 

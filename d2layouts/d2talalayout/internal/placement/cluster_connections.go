@@ -1,6 +1,6 @@
 package placement
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 // clusterExternalConnectedNodes returns the positioned endpoints outside the
 // cluster that remain in the cluster nodes' current placement graph. The

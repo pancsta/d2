@@ -3,7 +3,7 @@ package hierarchy
 import (
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 func manyExchangeRankGraph(tb testing.TB, width, height, edgeCount int) *layoutgraph.Graph {

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2latex"
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2latex"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 const minimalFrozenMathJaxTextSVG = `<svg style="vertical-align: -0.1ex;" xmlns="http://www.w3.org/2000/svg" width="2ex" height="2ex" role="img" focusable="false" viewBox="0 -900 1000 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi" class=" MathML-Unit"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">µ</text></g></g></g></svg>`

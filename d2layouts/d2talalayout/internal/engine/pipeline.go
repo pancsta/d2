@@ -7,19 +7,19 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/lib/label"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/grouping"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/hierarchy"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/packing"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placement"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/proximity"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/routing"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/trees"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/grouping"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/hierarchy"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/packing"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placement"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/proximity"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/routing"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/trees"
 )
 
 const maxGraphSize = limits.MaxGraphSize

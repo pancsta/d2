@@ -3,7 +3,7 @@ package d2isometricimg
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 // A static SVG uses the same time-zero snapshot as the native PNG renderer.

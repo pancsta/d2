@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/lib/color"
 )
 
 // pruneThemeCSS specializes a complete ThemeCSS stylesheet to the rendered SVG

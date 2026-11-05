@@ -27,15 +27,15 @@ import (
 	"github.com/d2lang/util-go/xmain"
 	"github.com/d2lang/util-go/xos"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/netpolicy"
-	"github.com/d2lang/d2/lib/pptx"
-	"github.com/d2lang/d2/lib/xgif"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/netpolicy"
+	"github.com/pancsta/d2/lib/pptx"
+	"github.com/pancsta/d2/lib/xgif"
 )
 
 func TestPagedCLIProducesOutput(t *testing.T) {

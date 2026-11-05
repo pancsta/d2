@@ -11,8 +11,8 @@ import (
 	"hash"
 	"sync"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 // Font is one resolved font face. Data is owned by the result and may be

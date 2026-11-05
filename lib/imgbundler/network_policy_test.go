@@ -9,10 +9,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/d2lang/d2/internal/testlog"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/netpolicy"
-	"github.com/d2lang/d2/lib/simplelog"
+	"github.com/pancsta/d2/internal/testlog"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/netpolicy"
+	"github.com/pancsta/d2/lib/simplelog"
 )
 
 func TestBundleRemoteNetworkPolicy(t *testing.T) {

@@ -13,7 +13,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 func TestSystemFallbackResolverUsesBoundedOwnedFontBytes(t *testing.T) {

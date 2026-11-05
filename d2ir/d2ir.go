@@ -11,10 +11,10 @@ import (
 
 	"github.com/d2lang/util-go/go2"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2target"
 )
 
 // Most errors returned by a node should be created with d2parser.Errorf

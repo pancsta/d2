@@ -5,7 +5,7 @@ import (
 	"image"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 // maskRenderBounds omits the unchanged white area of a luminance mask whose

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // The routines below implement the algorithm described in `Fig. 1`, and section

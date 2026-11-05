@@ -30,9 +30,9 @@ import (
 
 	"github.com/d2lang/util-go/xmain"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/lib/localfile"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/lib/localfile"
 )
 
 // Enabled with the build tag "dev".

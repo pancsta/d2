@@ -9,10 +9,10 @@ import (
 
 	"github.com/d2lang/util-go/go2"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func TestConfigurableOptsSerializeELK012Keys(t *testing.T) {

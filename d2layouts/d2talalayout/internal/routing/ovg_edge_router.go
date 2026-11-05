@@ -8,14 +8,14 @@ import (
 	"math"
 	"slices"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/nodeshape"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/typedpool"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/nodeshape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/typedpool"
 
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 // Map pools for reducing allocations in hot paths

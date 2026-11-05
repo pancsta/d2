@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
 )
 
 func TestPagePreservesImageAndProjectsTypedLinks(t *testing.T) {

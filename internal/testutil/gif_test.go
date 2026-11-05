@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
 )
 
 func TestValidateGIF(t *testing.T) {

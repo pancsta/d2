@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 // DefaultMaxVariableExpansion is the maximum amount of work that variable

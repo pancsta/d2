@@ -1,6 +1,6 @@
 package graphjson
 
-import "github.com/d2lang/d2/lib/geo"
+import "github.com/pancsta/d2/lib/geo"
 
 func serializeDirection(direction geo.Orientation) string {
 	switch direction {

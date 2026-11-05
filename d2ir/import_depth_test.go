@@ -10,8 +10,8 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/d2lang/d2/d2ir"
-	"github.com/d2lang/d2/d2parser"
+	"github.com/pancsta/d2/d2ir"
+	"github.com/pancsta/d2/d2parser"
 )
 
 const importDepthHelperEnv = "D2_TEST_IMPORT_DEPTH_HELPER"

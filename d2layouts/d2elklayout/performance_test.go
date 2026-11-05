@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func BenchmarkLayoutDense(b *testing.B) {

@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
 )
 
 const maxPDFContentStreamBytes = 64 << 20

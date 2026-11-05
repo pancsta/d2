@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 type ownedNodeRecord struct {

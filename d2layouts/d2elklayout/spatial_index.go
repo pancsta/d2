@@ -3,8 +3,8 @@ package d2elklayout
 import (
 	"math"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 const (

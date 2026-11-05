@@ -10,9 +10,9 @@ import (
 	"unicode"
 	"unicode/utf16"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2target"
 )
 
 type CompletionKind int

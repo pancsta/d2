@@ -3,7 +3,7 @@ package label
 import (
 	"math"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // These are % locations where labels will be placed along the connection

@@ -7,11 +7,11 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placementcost"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placementcost"
 )
 
 // sizelessOptimizer holds the state during the first part (sizeless) of the optimization routine described in

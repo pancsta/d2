@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/internal/testutil/imagediff"
-	"github.com/d2lang/d2/lib/pdf"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/lib/pdf"
 )
 
 func TestInspectD2PDFDecodesRasterPagesAndLinks(t *testing.T) {

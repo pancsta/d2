@@ -16,8 +16,8 @@ import (
 )
 
 const (
-	talaInternalImport  = "github.com/d2lang/d2/d2layouts/d2talalayout/internal/"
-	talaInternalRoot    = "github.com/d2lang/d2/d2layouts/d2talalayout/internal"
+	talaInternalImport  = "github.com/pancsta/d2/d2layouts/d2talalayout/internal/"
+	talaInternalRoot    = "github.com/pancsta/d2/d2layouts/d2talalayout/internal"
 	engineImport        = talaInternalImport + "engine"
 	graphBoundsImport   = talaInternalImport + "graphbounds"
 	graphJSONImport     = talaInternalImport + "graphjson"
@@ -26,9 +26,9 @@ const (
 )
 
 var hostModelImports = []string{
-	"github.com/d2lang/d2/d2renderers/d2fonts",
-	"github.com/d2lang/d2/d2graph",
-	"github.com/d2lang/d2/d2target",
+	"github.com/pancsta/d2/d2renderers/d2fonts",
+	"github.com/pancsta/d2/d2graph",
+	"github.com/pancsta/d2/d2target",
 }
 
 var algorithmPackageNames = []string{
@@ -107,8 +107,8 @@ func TestInternalPackageDependencies(t *testing.T) {
 			// call d2target geometry but must never depend back on TALA.
 			packageImport: talaInternalImport + "labelgeom",
 			forbiddenImports: []string{
-				"github.com/d2lang/d2/d2renderers/d2fonts",
-				"github.com/d2lang/d2/d2graph",
+				"github.com/pancsta/d2/d2renderers/d2fonts",
+				"github.com/pancsta/d2/d2graph",
 			},
 			forbiddenPrefix: talaInternalImport,
 		},
@@ -188,7 +188,7 @@ func TestInternalPackageDependencies(t *testing.T) {
 			}
 			if isPackageOrDescendant(packageImport, placementCostImport) {
 				standardLibrary := !strings.Contains(strings.Split(importPath, "/")[0], ".")
-				allowedLeaf := importPath == "github.com/d2lang/d2/lib/geo" ||
+				allowedLeaf := importPath == "github.com/pancsta/d2/lib/geo" ||
 					importPath == talaInternalImport+"invariant" ||
 					importPath == talaInternalImport+"layoutgraph" ||
 					importPath == talaInternalImport+"typedpool"
@@ -283,7 +283,7 @@ func TestAlgorithmAliasPolicy(t *testing.T) {
 		{
 			name: "ordinary use and function wrapper",
 			src: `package grouping
-import layoutgraph "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import layoutgraph "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 type state struct { node *layoutgraph.Node }
 func newNode() *layoutgraph.Node { return layoutgraph.NewNode(1, 1, 1) }
 const maxReferences = layoutgraph.MaxTopologyReferences
@@ -292,7 +292,7 @@ const maxReferences = layoutgraph.MaxTopologyReferences
 		{
 			name: "type alias",
 			src: `package grouping
-import layoutgraph "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import layoutgraph "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 type Node = layoutgraph.Node
 `,
 			want: []string{"aliases type Node"},
@@ -300,7 +300,7 @@ type Node = layoutgraph.Node
 		{
 			name: "variable forwarder",
 			src: `package grouping
-import layoutgraph "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import layoutgraph "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 var NewNode = layoutgraph.NewNode
 `,
 			want: []string{"forwards var NewNode"},
@@ -308,7 +308,7 @@ var NewNode = layoutgraph.NewNode
 		{
 			name: "dot import",
 			src: `package grouping
-import . "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import . "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 `,
 			want: []string{"dot-imports ownership package"},
 		},

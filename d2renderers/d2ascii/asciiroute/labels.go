@@ -4,7 +4,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // RouteLabelPosition holds calculated position for route label

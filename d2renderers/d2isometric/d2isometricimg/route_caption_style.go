@@ -3,11 +3,11 @@ package d2isometricimg
 import (
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/d2themes"
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/d2themes"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
+	"github.com/pancsta/d2/lib/label"
 )
 
 func nativeCaptionPaint(scene *d2isometric.Scene) func(string) string {

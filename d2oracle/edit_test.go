@@ -13,11 +13,11 @@ import (
 	"github.com/d2lang/util-go/mapfs"
 	"github.com/d2lang/util-go/xjson"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2oracle"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2oracle"
+	"github.com/pancsta/d2/d2target"
 )
 
 // TODO: make assertions less specific

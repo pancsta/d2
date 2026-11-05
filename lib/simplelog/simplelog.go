@@ -4,7 +4,7 @@ package simplelog
 import (
 	"context"
 
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/lib/log"
 	"github.com/d2lang/util-go/cmdlog"
 )
 

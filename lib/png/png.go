@@ -8,7 +8,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/lib/version"
 )
 
 // SCALE is the static raster device scale used by PNG, PDF, and PPTX export.

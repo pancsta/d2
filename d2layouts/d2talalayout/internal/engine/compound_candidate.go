@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/hierarchy"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placement"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/hierarchy"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placement"
 )
 
 // CompoundCandidate gives the selected drawing at most one rigid-container

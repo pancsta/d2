@@ -6,10 +6,10 @@ import (
 	"slices"
 	"sort"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/hierarchy"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/hierarchy"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 func newOVGForHierarchy(g *layoutgraph.Graph, h *layoutgraph.Hierarchy, guard *ovgBuildGuard) (*OVG, error) {

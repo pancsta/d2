@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/d2lang/d2/lib/netpolicy"
+	"github.com/pancsta/d2/lib/netpolicy"
 )
 
 func TestHTTPNetworkPolicy(t *testing.T) {

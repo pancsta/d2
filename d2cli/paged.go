@@ -7,15 +7,15 @@ import (
 	"io"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/pdf"
-	"github.com/d2lang/d2/lib/png"
-	"github.com/d2lang/d2/lib/pptx"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/pdf"
+	"github.com/pancsta/d2/lib/png"
+	"github.com/pancsta/d2/lib/pptx"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 const (

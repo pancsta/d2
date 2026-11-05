@@ -4,13 +4,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2dagrelayout"
-	"github.com/d2lang/d2/d2lib"
-	"github.com/d2lang/d2/d2oracle"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2dagrelayout"
+	"github.com/pancsta/d2/d2lib"
+	"github.com/pancsta/d2/d2oracle"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 // Remember to add if err != nil checks in production.

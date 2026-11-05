@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"image/color"
 
-	"github.com/d2lang/d2/d2renderers/d2latex"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2svgimport"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2renderers/d2latex"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2svgimport"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
 )
 
 type latexAssetKey struct {

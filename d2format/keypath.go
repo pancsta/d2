@@ -3,7 +3,7 @@ package d2format
 import (
 	"strings"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 // FormatKeyPath formats the scalar values in a as a canonical key path, like

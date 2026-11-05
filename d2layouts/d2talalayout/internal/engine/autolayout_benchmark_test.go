@@ -9,7 +9,7 @@ import (
 
 	"log/slog"
 
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func BenchmarkAutolayout(b *testing.B) {

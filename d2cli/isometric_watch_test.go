@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
 	"github.com/d2lang/util-go/go2"
 	"github.com/d2lang/util-go/xmain"
 	"github.com/d2lang/util-go/xos"

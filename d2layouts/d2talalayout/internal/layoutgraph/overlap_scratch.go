@@ -1,6 +1,6 @@
 package layoutgraph
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/typedpool"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/typedpool"
 
 const maxPooledOverlapExceptions = 4096
 

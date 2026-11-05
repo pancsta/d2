@@ -1,6 +1,6 @@
 package layoutgraph
 
-import "github.com/d2lang/d2/lib/geo"
+import "github.com/pancsta/d2/lib/geo"
 
 // LabelBoxFits reports whether outer completely contains inner.
 func LabelBoxFits(outer, inner *geo.Box) bool {

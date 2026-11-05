@@ -6,7 +6,7 @@ import (
 
 	"github.com/d2lang/util-go/assert"
 
-	"github.com/d2lang/d2/d2compiler"
+	"github.com/pancsta/d2/d2compiler"
 )
 
 func TestCompileReversedEquivalentEdgeIndexes(t *testing.T) {

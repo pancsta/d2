@@ -10,7 +10,7 @@ import (
 	"image/gif"
 	"slices"
 
-	"github.com/d2lang/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
 )
 
 const infiniteLoop = 0

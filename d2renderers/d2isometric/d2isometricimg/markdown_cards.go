@@ -3,8 +3,8 @@ package d2isometricimg
 import (
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 // Leaf Markdown is a document in its own source allocation. Container labels

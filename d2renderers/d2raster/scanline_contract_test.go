@@ -9,7 +9,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2raster/internal/scanline"
+	"github.com/pancsta/d2/d2renderers/d2raster/internal/scanline"
 )
 
 // These tests exercise the scanline package through the narrow surface used by

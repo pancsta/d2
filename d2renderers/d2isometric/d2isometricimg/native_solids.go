@@ -4,10 +4,10 @@ import (
 	"image"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2renderers/internal/scenepaint"
-	"github.com/d2lang/d2/d2target"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/internal/scenepaint"
+	"github.com/pancsta/d2/d2target"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 // Surface decoration must not select a different physical shape. In

@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/routing"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/routing"
 )
 
 func TestRouteSearchCorpusTelemetry(t *testing.T) {

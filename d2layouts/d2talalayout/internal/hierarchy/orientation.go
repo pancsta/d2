@@ -1,6 +1,6 @@
 package hierarchy
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 // IsHorizontal reports the orientation shared by hierarchy placement and
 // hierarchy-aware routing. Entity-relationship diagrams use horizontal

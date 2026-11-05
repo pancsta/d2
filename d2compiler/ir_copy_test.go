@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2ir"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2ir"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2target"
 )
 
 // Compare the entire graph, including ASTs, references, parents, legends and

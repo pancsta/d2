@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
 )
 
 // Match only the palette and sketch rules emitted by ThemeCSS. Other rules,

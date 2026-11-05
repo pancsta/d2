@@ -10,10 +10,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric/d2isometricimg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/svg"
-	"github.com/d2lang/d2/lib/version"
+	"github.com/pancsta/d2/d2renderers/d2isometric/d2isometricimg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/svg"
+	"github.com/pancsta/d2/lib/version"
 )
 
 func renderIsometric(diagram *d2target.Diagram, opts *RenderOpts) ([]byte, error) {

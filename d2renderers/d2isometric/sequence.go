@@ -1,11 +1,11 @@
 package d2isometric
 
 import (
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2layouts/d2sequence"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2layouts/d2sequence"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/d2target"
 )
 
 // A sequence scope is an explicit source container, or the source root (-1).

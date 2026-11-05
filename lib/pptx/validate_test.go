@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/internal/testutil"
-	"github.com/d2lang/d2/lib/pptx"
+	"github.com/pancsta/d2/internal/testutil"
+	"github.com/pancsta/d2/lib/pptx"
 )
 
 func TestValidateCompatibility(t *testing.T) {

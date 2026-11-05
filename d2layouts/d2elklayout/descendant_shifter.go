@@ -1,6 +1,6 @@
 package d2elklayout
 
-import "github.com/d2lang/d2/d2graph"
+import "github.com/pancsta/d2/d2graph"
 
 // descendantShifter applies the same geometry updates as
 // d2graph.Object.ShiftDescendants while avoiding its repeated whole-graph edge

@@ -3,9 +3,9 @@ package routing
 import (
 	"context"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 // TraceEdgesToShapeBorder trims every route endpoint to the rendered shape.

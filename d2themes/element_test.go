@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 func TestThemableElementEscapesPaintAttributes(t *testing.T) {

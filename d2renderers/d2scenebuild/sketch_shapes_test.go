@@ -10,11 +10,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2raster"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/patternassets"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
+	"github.com/pancsta/d2/d2renderers/d2raster"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/patternassets"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
 )
 
 func TestSketchOrdinaryShapeFamiliesUseTypedRoughPathsDeterministically(t *testing.T) {

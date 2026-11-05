@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
 )
 
 const maxPositionedRoutePoints = 1_000_000

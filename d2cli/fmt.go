@@ -10,9 +10,9 @@ import (
 
 	"github.com/d2lang/util-go/xmain"
 
-	"github.com/d2lang/d2/d2format"
-	"github.com/d2lang/d2/d2parser"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2format"
+	"github.com/pancsta/d2/d2parser"
+	"github.com/pancsta/d2/lib/log"
 )
 
 func fmtCmd(ctx context.Context, ms *xmain.State, check bool) (err error) {

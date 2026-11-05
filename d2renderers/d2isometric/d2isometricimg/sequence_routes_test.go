@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 func sequenceTestEdge(id, role string, points ...Vec) d2isometric.Edge {

@@ -15,16 +15,16 @@ import (
 
 	"github.com/d2lang/util-go/go2"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2svg"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/internal/testutil"
-	"github.com/d2lang/d2/internal/testutil/imagediff"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/pdf"
-	d2png "github.com/d2lang/d2/lib/png"
-	d2pptx "github.com/d2lang/d2/lib/pptx"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2svg"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/internal/testutil"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/pdf"
+	d2png "github.com/pancsta/d2/lib/png"
+	d2pptx "github.com/pancsta/d2/lib/pptx"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 func TestPagedContainersEmbedEquivalentPixels(t *testing.T) {

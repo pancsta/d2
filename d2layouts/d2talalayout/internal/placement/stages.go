@@ -4,12 +4,12 @@ import (
 	"context"
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/loops"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placementcost"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/proximity"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/loops"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placementcost"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/proximity"
 )
 
 func Prescale(graph *layoutgraph.Graph) {

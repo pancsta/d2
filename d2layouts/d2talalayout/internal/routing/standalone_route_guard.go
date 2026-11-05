@@ -4,10 +4,10 @@ import (
 	"math"
 	"sort"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
 )
 
 func (guard *routeWorkGuard) reserveSort(length int) error {

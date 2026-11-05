@@ -8,9 +8,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 func pageHingeTestKey(a, c Vec) classicInkPair {

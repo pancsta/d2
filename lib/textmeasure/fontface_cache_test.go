@@ -7,7 +7,7 @@ import (
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/sfnt"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
 )
 
 func legacyFontWidth(t *Ruler, fontSpec d2fonts.Font, s string) (float64, bool) {

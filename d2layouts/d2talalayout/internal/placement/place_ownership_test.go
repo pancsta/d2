@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/grouping"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/grouping"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 type placeOwnerFixture struct {

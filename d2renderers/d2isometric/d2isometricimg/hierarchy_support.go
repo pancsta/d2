@@ -3,7 +3,7 @@ package d2isometricimg
 import (
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
 )
 
 const hierarchyMaxDescent = .60

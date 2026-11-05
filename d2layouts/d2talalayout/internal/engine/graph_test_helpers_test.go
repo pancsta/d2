@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/graphjson"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/graphjson"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 func readGraph(ctx context.Context, filename string) (*layoutgraph.Graph, error) {

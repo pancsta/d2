@@ -1,6 +1,6 @@
 package d2talalayout
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
 
 // Keep adapter preflight aligned with the native engine limits.
 const (

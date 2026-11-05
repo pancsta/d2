@@ -6,9 +6,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2ascii/asciicanvas"
-	"github.com/d2lang/d2/d2renderers/d2ascii/charset"
-	"github.com/d2lang/d2/lib/log"
+	"github.com/pancsta/d2/d2renderers/d2ascii/asciicanvas"
+	"github.com/pancsta/d2/d2renderers/d2ascii/charset"
+	"github.com/pancsta/d2/lib/log"
 )
 
 type Context struct {

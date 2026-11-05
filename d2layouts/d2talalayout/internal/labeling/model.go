@@ -4,10 +4,10 @@
 package labeling
 
 import (
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/lib/label"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/nodeshape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/nodeshape"
 )
 
 // searchRange is the fraction of an edge route searched for an unlocked

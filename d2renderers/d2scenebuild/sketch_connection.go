@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2sketch"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2sketch"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func (b *builder) sketchConnectionPath(connection d2target.Connection, source d2scene.Path) (d2scene.Path, error) {

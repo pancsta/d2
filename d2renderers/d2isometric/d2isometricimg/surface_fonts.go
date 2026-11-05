@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2target"
 )
 
 func nativeEmbeddedAssetsOnly(diagram *d2target.Diagram) error {

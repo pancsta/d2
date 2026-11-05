@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+import "github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 
 // Descendants returns tree descendants in the breadth-first order used when
 // restored tree nodes and edges are copied back into an owning graph.

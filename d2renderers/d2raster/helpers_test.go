@@ -4,7 +4,7 @@ import (
 	"context"
 	"image/color"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 func prepare(ctx context.Context, document *d2scene.Document, options FrameOptions) (*preparedDocument, error) {

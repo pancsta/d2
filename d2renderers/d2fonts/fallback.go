@@ -17,7 +17,7 @@ import (
 	"golang.org/x/image/font/opentype"
 	"golang.org/x/image/font/sfnt"
 
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 // FallbackFont is one fully resolved host font face. Data is owned by the

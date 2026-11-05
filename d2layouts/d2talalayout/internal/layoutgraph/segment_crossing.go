@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 const scoringCancellationCheckInterval = 64

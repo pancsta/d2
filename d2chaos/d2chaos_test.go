@@ -12,13 +12,13 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/d2chaos"
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2exporter"
-	"github.com/d2lang/d2/d2layouts/d2dagrelayout"
-	"github.com/d2lang/d2/internal/testlog"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2chaos"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2exporter"
+	"github.com/pancsta/d2/d2layouts/d2dagrelayout"
+	"github.com/pancsta/d2/internal/testlog"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 // usage: D2_CHAOS_MAXI=100 D2_CHAOS_N=100 ./ci/test.sh ./d2chaos

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func EnsureTransactionWorkGuard(ctx context.Context, location string) (context.Context, *limits.WorkGuard, error) {

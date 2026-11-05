@@ -6,10 +6,10 @@ import (
 	"math"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func TestAnimationFramingKeepsTinyNodeAndTrafficGeometry(t *testing.T) {

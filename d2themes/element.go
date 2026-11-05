@@ -5,8 +5,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/lib/color"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/lib/color"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 // ThemableElement is a helper class for creating new XML elements.

@@ -4,9 +4,9 @@ import (
 	"context"
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/placementcost"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/placementcost"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // dejitter performs micro-movements on nodes to remove the jittery connections that can be straightened out with slight adjustments in one direction

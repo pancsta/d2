@@ -7,8 +7,8 @@ import (
 	"image/color"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2raster/internal/scanline"
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2raster/internal/scanline"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 type preparedPaintKind uint8

@@ -1,6 +1,6 @@
 package d2isometricimg
 
-import "github.com/d2lang/d2/d2renderers/d2isometric"
+import "github.com/pancsta/d2/d2renderers/d2isometric"
 
 // Sequence time remains the compiled Z coordinate. Only the material depth
 // changes: groups are regions below the timeline, activations are inked rails,

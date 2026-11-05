@@ -3,7 +3,7 @@ package d2svgimport
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 // compiledClipPath is an immutable resource template. commands is cloned for

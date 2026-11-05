@@ -5,7 +5,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/d2lang/d2/d2compiler"
+	"github.com/pancsta/d2/d2compiler"
 )
 
 func TestIsometricConfig(t *testing.T) {

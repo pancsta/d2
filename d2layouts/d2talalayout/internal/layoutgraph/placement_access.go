@@ -3,7 +3,7 @@ package layoutgraph
 import (
 	"context"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func (graph *Graph) FixedNodes() []*Node { return graph.fixedNodes() }

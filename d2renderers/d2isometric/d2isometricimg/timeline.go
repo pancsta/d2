@@ -12,8 +12,8 @@ import (
 
 	"github.com/ericpauley/go-quantize/quantize"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 const MaxTimelineBoards = 128

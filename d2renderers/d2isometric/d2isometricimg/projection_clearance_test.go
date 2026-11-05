@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 // This independent check uses the final raster camera's viewing axes. Four

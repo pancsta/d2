@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/d2lang/d2/lib/localfile"
+	"github.com/pancsta/d2/lib/localfile"
 )
 
 func TestTrackedFSHonorsLocalFilePolicy(t *testing.T) {

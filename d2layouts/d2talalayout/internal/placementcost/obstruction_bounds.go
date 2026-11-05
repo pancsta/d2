@@ -3,7 +3,7 @@ package placementcost
 import (
 	"math"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 // obstructionBounds encloses the straight, L-shaped, and alternate midpoint

@@ -13,7 +13,7 @@ import (
 	"math/rand"
 	"testing"
 
-	d2png "github.com/d2lang/d2/lib/png"
+	d2png "github.com/pancsta/d2/lib/png"
 )
 
 func TestRasterPNGBandsMatchImageEncoder(t *testing.T) {

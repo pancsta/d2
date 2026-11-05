@@ -10,7 +10,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 func TestRegionalFiltersMatchCompleteLayers(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
-	"github.com/d2lang/d2/lib/label"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/lib/label"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 const (

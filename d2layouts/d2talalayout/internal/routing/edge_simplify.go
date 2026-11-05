@@ -3,8 +3,8 @@ package routing
 import (
 	"context"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // simplifyEdgeRoutes post-processes edge routes to remove unnecessary bending caused by the constraint that routes have to go through OVG nodes

@@ -11,9 +11,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2target"
 )
 
 // SVG consumes the same physical scene as PNG. Visibility is resolved in

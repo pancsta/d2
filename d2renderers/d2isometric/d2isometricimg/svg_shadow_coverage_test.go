@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 // Check silhouette alpha before the outer blur. The native SVG importer does

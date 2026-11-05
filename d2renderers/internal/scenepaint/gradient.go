@@ -10,8 +10,8 @@ import (
 
 	"github.com/mazznoer/csscolorparser"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 // Gradient translates the object-bounding-box gradient geometry emitted

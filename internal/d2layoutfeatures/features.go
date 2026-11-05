@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/d2lang/d2/d2graph"
+	"github.com/pancsta/d2/d2graph"
 )
 
 type features uint8

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/d2lang/d2/d2ast"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2ast"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/color"
 	"github.com/d2lang/util-go/go2"
 )
 

@@ -1,6 +1,6 @@
 package d2themescatalog
 
-import "github.com/d2lang/d2/d2themes"
+import "github.com/pancsta/d2/d2themes"
 
 var NeutralDefault = d2themes.Theme{
 	ID:   0,

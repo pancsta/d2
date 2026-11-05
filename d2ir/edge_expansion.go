@@ -3,7 +3,7 @@ package d2ir
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/d2ast"
+	"github.com/pancsta/d2/d2ast"
 )
 
 // DefaultMaxEdgeExpansion is the maximum number of distinct edge-segment and

@@ -1,8 +1,8 @@
 package d2isometricimg
 
 import (
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 // Theme-default bodies use the classic study's restrained ink palette.

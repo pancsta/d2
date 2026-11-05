@@ -7,7 +7,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scene"
 )
 
 func TestStrokeRegionsIncludeLargeRotatedRoundCapsAndJoins(t *testing.T) {

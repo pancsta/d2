@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/d2lang/d2/d2renderers/d2raster/internal/scanline"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/d2raster/internal/scanline"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 // FrameOptions defines the pixel mapping and hard resource ceilings for one

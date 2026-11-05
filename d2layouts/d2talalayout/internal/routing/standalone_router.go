@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/labeling"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/labeling"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
 )
 
 func hasCompleteEdgeRoute(edge *layoutgraph.Edge) bool {

@@ -8,7 +8,7 @@ import (
 	"html"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2fonts"
+	"github.com/pancsta/d2/d2renderers/d2fonts"
 )
 
 func legacyEmbedFonts(buf *bytes.Buffer, diagramHash, source string, fontFamily *d2fonts.FontFamily, monoFontFamily *d2fonts.FontFamily, corpus string) {

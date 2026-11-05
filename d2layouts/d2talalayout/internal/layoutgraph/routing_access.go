@@ -1,6 +1,6 @@
 package layoutgraph
 
-import "github.com/d2lang/d2/lib/geo"
+import "github.com/pancsta/d2/lib/geo"
 
 // RoutingCostState is the cached routing-cost state that an atomic routing
 // stage must restore on failure.

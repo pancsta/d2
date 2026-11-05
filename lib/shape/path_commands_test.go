@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/shape"
-	"github.com/d2lang/d2/lib/svg"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/shape"
+	"github.com/pancsta/d2/lib/svg"
 )
 
 func TestCustomShapesProvideTypedPathCommands(t *testing.T) {

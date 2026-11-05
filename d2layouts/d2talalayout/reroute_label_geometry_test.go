@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
 )
 
 // These fixtures explicitly use a three-pixel stroke, matching the geometry

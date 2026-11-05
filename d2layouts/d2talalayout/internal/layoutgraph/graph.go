@@ -7,12 +7,12 @@ import (
 	"slices"
 	"sync"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/invariant"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/limits"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/typedpool"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/invariant"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/limits"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/typedpool"
 
-	"github.com/d2lang/d2/lib/geo"
-	"github.com/d2lang/d2/lib/label"
+	"github.com/pancsta/d2/lib/geo"
+	"github.com/pancsta/d2/lib/label"
 )
 
 const (

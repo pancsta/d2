@@ -5,10 +5,10 @@ import (
 	"image/color"
 	"time"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2target"
-	libcolor "github.com/d2lang/d2/lib/color"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2target"
+	libcolor "github.com/pancsta/d2/lib/color"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 const (

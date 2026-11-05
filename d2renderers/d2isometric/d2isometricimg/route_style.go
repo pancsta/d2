@@ -3,7 +3,7 @@ package d2isometricimg
 import (
 	"hash/fnv"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
 )
 
 // Explicit paints keep their authored meaning. Otherwise a stable muted hue

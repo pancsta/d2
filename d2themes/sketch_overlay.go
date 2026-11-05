@@ -3,7 +3,7 @@ package d2themes
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/lib/color"
 )
 
 type ThemableSketchOverlay struct {

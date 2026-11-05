@@ -3,7 +3,7 @@ package layoutgraph
 import (
 	"maps"
 
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 // HerdAssignment records the side of a container toward which a node should

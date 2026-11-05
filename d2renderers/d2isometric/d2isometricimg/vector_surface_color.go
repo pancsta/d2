@@ -6,8 +6,8 @@ import (
 
 	"golang.org/x/image/math/fixed"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/fontface"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/fontface"
 )
 
 func (w *nativeSurfaceSVGWriter) colorGlyph(face *fontface.ParsedFace, plan *fontface.COLRv1Plan, origin d2scene.Point, size float64, depth int) string {

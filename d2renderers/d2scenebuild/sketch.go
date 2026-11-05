@@ -3,8 +3,8 @@ package d2scenebuild
 import (
 	"fmt"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2sketch"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2sketch"
 	rough "github.com/d2lang/rough-go"
 )
 

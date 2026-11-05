@@ -7,14 +7,14 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/d2scenebuild"
-	"github.com/d2lang/d2/d2renderers/internal/scenepaint"
-	"github.com/d2lang/d2/d2target"
-	"github.com/d2lang/d2/d2themes"
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/d2scenebuild"
+	"github.com/pancsta/d2/d2renderers/internal/scenepaint"
+	"github.com/pancsta/d2/d2target"
+	"github.com/pancsta/d2/d2themes"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 // A printed panel retains native legend and root-frame decoration. Diagram

@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/d2lang/d2/d2renderers/d2isometric"
-	"github.com/d2lang/d2/d2target"
+	"github.com/pancsta/d2/d2renderers/d2isometric"
+	"github.com/pancsta/d2/d2target"
 )
 
 func arrowTestRoute(b *meshBuilder, edge d2isometric.Edge, points []Vec) []Vec {

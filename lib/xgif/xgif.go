@@ -20,7 +20,7 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/d2lang/d2/internal/testutil"
+	"github.com/pancsta/d2/internal/testutil"
 
 	"github.com/ericpauley/go-quantize/quantize"
 

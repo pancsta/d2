@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2graph"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2graph"
 )
 
 func TestSerialization(t *testing.T) {

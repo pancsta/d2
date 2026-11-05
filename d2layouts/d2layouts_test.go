@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/d2lang/d2/d2compiler"
-	"github.com/d2lang/d2/d2graph"
-	"github.com/d2lang/d2/d2layouts/d2dagrelayout"
-	"github.com/d2lang/d2/d2themes/d2themescatalog"
-	"github.com/d2lang/d2/lib/log"
-	"github.com/d2lang/d2/lib/textmeasure"
+	"github.com/pancsta/d2/d2compiler"
+	"github.com/pancsta/d2/d2graph"
+	"github.com/pancsta/d2/d2layouts/d2dagrelayout"
+	"github.com/pancsta/d2/d2themes/d2themescatalog"
+	"github.com/pancsta/d2/lib/log"
+	"github.com/pancsta/d2/lib/textmeasure"
 )
 
 func TestExtractSubgraphsMatchesSequentialExtraction(t *testing.T) {

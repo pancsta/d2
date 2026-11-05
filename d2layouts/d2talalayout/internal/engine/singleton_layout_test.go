@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/geo"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/geo"
 )
 
 func TestLayoutPreservesFixedSingletonPosition(t *testing.T) {

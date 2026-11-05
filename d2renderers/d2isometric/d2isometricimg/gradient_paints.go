@@ -10,9 +10,9 @@ import (
 
 	"github.com/mazznoer/csscolorparser"
 
-	"github.com/d2lang/d2/d2renderers/d2scene"
-	"github.com/d2lang/d2/d2renderers/internal/scenepaint"
-	libcolor "github.com/d2lang/d2/lib/color"
+	"github.com/pancsta/d2/d2renderers/d2scene"
+	"github.com/pancsta/d2/d2renderers/internal/scenepaint"
+	libcolor "github.com/pancsta/d2/lib/color"
 )
 
 const nativeGradientTextureSize = 256

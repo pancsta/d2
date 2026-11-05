@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/grouping"
-	"github.com/d2lang/d2/d2layouts/d2talalayout/internal/layoutgraph"
-	"github.com/d2lang/d2/lib/shape"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/grouping"
+	"github.com/pancsta/d2/d2layouts/d2talalayout/internal/layoutgraph"
+	"github.com/pancsta/d2/lib/shape"
 )
 
 // used only in tests to check if the graph remains the same after Autolayout

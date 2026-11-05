@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/d2lang/d2/internal/testutil/imagediff"
+	"github.com/pancsta/d2/internal/testutil/imagediff"
 )
 
 // ValidatePPTX checks that pptxContent contains the structure emitted by D2's
